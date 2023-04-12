@@ -13,3 +13,6 @@
     </ul>
   </nav>
 </div>
+{% if page.dir contains "pico-sdk" %}
+  <p id="release">Release {{ site.data.supplemental.pico_sdk_release }}</p>
+{% endif %}

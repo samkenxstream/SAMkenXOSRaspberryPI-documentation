@@ -36,7 +36,7 @@ export PATH="$PATH:$GEM_HOME/bin"
 
 and close and relaunch your Terminal window to have these new variables activated. Finally, run
 ```
-$ gem install bundler
+$ gem install bundler -v 2.2.15
 ```
 to install the latest version of the Ruby `bundle` command.
 
@@ -52,6 +52,7 @@ Then you need to install Ruby,
 
 ```
 $ brew install ruby@2.7
+$ gem install bundler -v 2.2.15
 ```
 
 **NOTE:** Homebrew defaults to Ruby 3.0 which is incompatible with Asciidoctor.
@@ -96,6 +97,7 @@ Go ahead and `brew install` the other dependencies,
 $ brew install python@3
 $ brew install ninja
 $ brew install gumbo-parser
+$ pip3 install pyyaml
 ```
 
 ### Install Scripting Dependencies
@@ -131,6 +133,23 @@ You can revert your repository to a pristine state by running,
 $ make clean
 ```
 which will delete the `build/` and `documentation/html/` directories.
+
+### Building with Doxygen
+
+If you want to build the Pico C SDK Doxygen documentation alongside the main documentation site you can do so with,
+
+```
+$ make build_doxygen_doc
+$ make
+```
+
+and clean up afterwards by using,
+
+```
+$ make clean_everything
+```
+
+which will revert the repository to a cpristine state.
 
 ## Licence
 
